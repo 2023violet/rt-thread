@@ -189,6 +189,7 @@ static rt_err_t at32_get_adc_value(struct rt_adc_device *device, rt_int8_t chann
     return RT_EOK;
 }
 
+/* 避免直接传输给at32_adc_device->ops,以免每个实例都复制一份代码 */
 static const struct rt_adc_ops at_adc_ops =
 {
     .enabled = at32_adc_enabled,

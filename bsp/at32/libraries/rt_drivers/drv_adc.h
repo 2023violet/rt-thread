@@ -18,6 +18,8 @@
 extern "C" {
 #endif
 
+#define BSP_USING_ADC1
+
 #if defined(BSP_USING_ADC1) || defined(BSP_USING_ADC2) || defined(BSP_USING_ADC3)
 
 #ifndef ADC1_CONFIG
